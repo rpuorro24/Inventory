@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://dyof4fs7k2uqd"]
+
+[ext_resource type="Texture2D" uid="uid://bkmvncqioqitp" path="res://block_textures/t_block.png" id="1_dung4"]
+
+[node name="Area2D" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(12, 8)
+scale = Vector2(0.193, 0.193)
+texture = ExtResource("1_dung4")
+
+[node name="T_block" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(0, 0, 24, 0, 24, 8, 16, 8, 16, 16, 8, 16, 8, 8, 0, 8)

@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://bmu0fjucqok34"]
+
+[ext_resource type="Texture2D" uid="uid://b6bei74nhelja" path="res://block_textures/4x1.png" id="1_ea1bj"]
+
+[node name="Area2D" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(4, 16)
+scale = Vector2(0.193, 0.193)
+texture = ExtResource("1_ea1bj")
+
+[node name="4x1" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(0, 0, 0, 32, 8, 32, 8, 0)

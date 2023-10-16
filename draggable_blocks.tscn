@@ -1,0 +1,87 @@
+[gd_scene load_steps=9 format=3 uid="uid://di4xofy5ts46q"]
+
+[ext_resource type="PackedScene" uid="uid://bmu0fjucqok34" path="res://4x_1.tscn" id="1_rqcd3"]
+[ext_resource type="Script" path="res://TextureButton.gd" id="1_t52ko"]
+[ext_resource type="PackedScene" uid="uid://c06ox63sdnbe4" path="res://2x_2.tscn" id="2_q0b8x"]
+[ext_resource type="PackedScene" uid="uid://bo33se7u25lar" path="res://l_block.tscn" id="3_jwpiy"]
+[ext_resource type="PackedScene" uid="uid://bxlj1g3wccxid" path="res://reverse_l_block.tscn" id="4_iodcd"]
+[ext_resource type="PackedScene" uid="uid://ci412qar1h0b" path="res://zig_zag.tscn" id="5_trgbb"]
+[ext_resource type="PackedScene" uid="uid://xcq05dfkdncr" path="res://reverse_zig_zag.tscn" id="6_au5qp"]
+[ext_resource type="PackedScene" uid="uid://dyof4fs7k2uqd" path="res://t_block.tscn" id="7_xps33"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="BoxContainer" type="BoxContainer" parent="Control"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CenterContainer" type="CenterContainer" parent="Control/BoxContainer"]
+layout_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="Control/BoxContainer/CenterContainer"]
+layout_mode = 2
+script = ExtResource("1_t52ko")
+
+[node name="4x1" parent="Control/BoxContainer/CenterContainer/TextureButton" instance=ExtResource("1_rqcd3")]
+position = Vector2(0, -20)
+
+[node name="CenterContainer2" type="CenterContainer" parent="Control/BoxContainer"]
+layout_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="Control/BoxContainer/CenterContainer2"]
+layout_mode = 2
+
+[node name="2x2" parent="Control/BoxContainer/CenterContainer2/TextureButton" instance=ExtResource("2_q0b8x")]
+position = Vector2(12, -20)
+
+[node name="CenterContainer3" type="CenterContainer" parent="Control/BoxContainer"]
+layout_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="Control/BoxContainer/CenterContainer3"]
+layout_mode = 2
+
+[node name="l_block" parent="Control/BoxContainer/CenterContainer3/TextureButton" instance=ExtResource("3_jwpiy")]
+position = Vector2(32, -20)
+
+[node name="CenterContainer4" type="CenterContainer" parent="Control/BoxContainer"]
+layout_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="Control/BoxContainer/CenterContainer4"]
+layout_mode = 2
+
+[node name="reverse_l_block" parent="Control/BoxContainer/CenterContainer4/TextureButton" instance=ExtResource("4_iodcd")]
+position = Vector2(52, -20)
+
+[node name="CenterContainer5" type="CenterContainer" parent="Control/BoxContainer"]
+layout_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="Control/BoxContainer/CenterContainer5"]
+layout_mode = 2
+
+[node name="zig_zag" parent="Control/BoxContainer/CenterContainer5/TextureButton" instance=ExtResource("5_trgbb")]
+position = Vector2(-16, 20)
+
+[node name="CenterContainer6" type="CenterContainer" parent="Control/BoxContainer"]
+layout_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="Control/BoxContainer/CenterContainer6"]
+layout_mode = 2
+
+[node name="reverse_zig_zag" parent="Control/BoxContainer/CenterContainer6/TextureButton" instance=ExtResource("6_au5qp")]
+position = Vector2(4, 20)
+
+[node name="CenterContainer7" type="CenterContainer" parent="Control/BoxContainer"]
+layout_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="Control/BoxContainer/CenterContainer7"]
+layout_mode = 2
+
+[node name="t_block" parent="Control/BoxContainer/CenterContainer7/TextureButton" instance=ExtResource("7_xps33")]
+position = Vector2(24, 20)

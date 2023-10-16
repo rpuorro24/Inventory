@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://bxlj1g3wccxid"]
+
+[ext_resource type="Texture2D" uid="uid://ci81fxno2xqfh" path="res://block_textures/reverse_l_block.png" id="1_vjhun"]
+
+[node name="Area2D" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(8, 12)
+scale = Vector2(0.193, 0.193)
+texture = ExtResource("1_vjhun")
+
+[node name="Reverse_L_block" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(16, 0, 16, 24, 0, 24, 0, 16, 8, 16, 8, 0)

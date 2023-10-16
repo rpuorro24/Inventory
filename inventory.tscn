@@ -1,0 +1,35 @@
+[gd_scene load_steps=9 format=3 uid="uid://dc5hbg8ul4i4f"]
+
+[ext_resource type="PackedScene" uid="uid://dlqbu65maexy0" path="res://grid.tscn" id="1_l6e1a"]
+[ext_resource type="PackedScene" uid="uid://bmu0fjucqok34" path="res://4x_1.tscn" id="2_hpewm"]
+[ext_resource type="PackedScene" uid="uid://c06ox63sdnbe4" path="res://2x_2.tscn" id="3_cp5m1"]
+[ext_resource type="PackedScene" uid="uid://dyof4fs7k2uqd" path="res://t_block.tscn" id="4_hd81b"]
+[ext_resource type="PackedScene" uid="uid://bo33se7u25lar" path="res://l_block.tscn" id="5_uw6ac"]
+[ext_resource type="PackedScene" uid="uid://bxlj1g3wccxid" path="res://reverse_l_block.tscn" id="6_m4ibh"]
+[ext_resource type="PackedScene" uid="uid://ci412qar1h0b" path="res://zig_zag.tscn" id="7_i8wld"]
+[ext_resource type="PackedScene" uid="uid://xcq05dfkdncr" path="res://reverse_zig_zag.tscn" id="8_0fwbu"]
+
+[node name="Inventory" type="Area2D"]
+
+[node name="Grid" parent="." instance=ExtResource("1_l6e1a")]
+
+[node name="4x1" parent="." instance=ExtResource("2_hpewm")]
+position = Vector2(104, 8)
+
+[node name="2x2" parent="." instance=ExtResource("3_cp5m1")]
+position = Vector2(80, 8)
+
+[node name="T_block" parent="." instance=ExtResource("4_hd81b")]
+position = Vector2(88, -16)
+
+[node name="L_block" parent="." instance=ExtResource("5_uw6ac")]
+position = Vector2(88, 32)
+
+[node name="Reverse_L_block" parent="." instance=ExtResource("6_m4ibh")]
+position = Vector2(64, 32)
+
+[node name="Zig_zag" parent="." instance=ExtResource("7_i8wld")]
+position = Vector2(80, 64)
+
+[node name="Reverse_Zig_zag" parent="." instance=ExtResource("8_0fwbu")]
+position = Vector2(104, 56)

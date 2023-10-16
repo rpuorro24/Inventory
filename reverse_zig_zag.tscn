@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://xcq05dfkdncr"]
+
+[ext_resource type="Texture2D" uid="uid://bgam6jyreawjc" path="res://block_textures/reverse_zigzag.png" id="1_6m0go"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_rfjem"]
+
+[node name="Area2D" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(8, 12)
+rotation = 1.5708
+scale = Vector2(0.1935, 0.193)
+texture = ExtResource("1_6m0go")
+region_rect = Rect2(0, 0, 125.963, 82.5926)
+
+[node name="Reverse_Zig_zag" type="CollisionPolygon2D" parent="."]
+material = SubResource("CanvasItemMaterial_rfjem")
+polygon = PackedVector2Array(16, 0, 16, 16, 8, 16, 8, 24, 0, 24, 0, 8, 8, 8, 8, 0)

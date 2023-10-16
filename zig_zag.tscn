@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://ci412qar1h0b"]
+
+[ext_resource type="Texture2D" uid="uid://bip8e4hhstg4y" path="res://block_textures/zigzag.png" id="1_fvcu1"]
+
+[node name="Area2D" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(8, 12)
+rotation = 1.5708
+scale = Vector2(0.193, 0.193)
+texture = ExtResource("1_fvcu1")
+
+[node name="Zig_zag" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(0, 0, 0, 16, 8, 16, 8, 24, 16, 24, 16, 8, 8, 8, 8, 0)
