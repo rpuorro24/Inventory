@@ -1,13 +1,20 @@
-[gd_scene load_steps=9 format=3 uid="uid://di4xofy5ts46q"]
+[gd_scene load_steps=16 format=3 uid="uid://di4xofy5ts46q"]
 
 [ext_resource type="PackedScene" uid="uid://bmu0fjucqok34" path="res://4x_1.tscn" id="1_rqcd3"]
+[ext_resource type="Texture2D" uid="uid://b6bei74nhelja" path="res://block_textures/4x1.png" id="1_s1d2w"]
 [ext_resource type="Script" path="res://TextureButton.gd" id="1_t52ko"]
 [ext_resource type="PackedScene" uid="uid://c06ox63sdnbe4" path="res://2x_2.tscn" id="2_q0b8x"]
 [ext_resource type="PackedScene" uid="uid://bo33se7u25lar" path="res://l_block.tscn" id="3_jwpiy"]
 [ext_resource type="PackedScene" uid="uid://bxlj1g3wccxid" path="res://reverse_l_block.tscn" id="4_iodcd"]
+[ext_resource type="Texture2D" uid="uid://cwhq332rh636a" path="res://block_textures/2x2.png" id="4_kti4a"]
 [ext_resource type="PackedScene" uid="uid://ci412qar1h0b" path="res://zig_zag.tscn" id="5_trgbb"]
 [ext_resource type="PackedScene" uid="uid://xcq05dfkdncr" path="res://reverse_zig_zag.tscn" id="6_au5qp"]
+[ext_resource type="Texture2D" uid="uid://cgk4lf14gosa0" path="res://block_textures/l_block.png" id="6_jrvpf"]
 [ext_resource type="PackedScene" uid="uid://dyof4fs7k2uqd" path="res://t_block.tscn" id="7_xps33"]
+[ext_resource type="Texture2D" uid="uid://ci81fxno2xqfh" path="res://block_textures/reverse_l_block.png" id="8_v6fug"]
+[ext_resource type="Texture2D" uid="uid://bip8e4hhstg4y" path="res://block_textures/zigzag.png" id="10_21jde"]
+[ext_resource type="Texture2D" uid="uid://bgam6jyreawjc" path="res://block_textures/reverse_zigzag.png" id="12_dokux"]
+[ext_resource type="Texture2D" uid="uid://bkmvncqioqitp" path="res://block_textures/t_block.png" id="14_kskod"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -27,6 +34,7 @@ layout_mode = 2
 
 [node name="TextureButton" type="TextureButton" parent="Control/BoxContainer/CenterContainer"]
 layout_mode = 2
+texture_normal = ExtResource("1_s1d2w")
 script = ExtResource("1_t52ko")
 
 [node name="4x1" parent="Control/BoxContainer/CenterContainer/TextureButton" instance=ExtResource("1_rqcd3")]
@@ -37,6 +45,8 @@ layout_mode = 2
 
 [node name="TextureButton" type="TextureButton" parent="Control/BoxContainer/CenterContainer2"]
 layout_mode = 2
+texture_normal = ExtResource("4_kti4a")
+script = ExtResource("1_t52ko")
 
 [node name="2x2" parent="Control/BoxContainer/CenterContainer2/TextureButton" instance=ExtResource("2_q0b8x")]
 position = Vector2(12, -20)
@@ -46,6 +56,8 @@ layout_mode = 2
 
 [node name="TextureButton" type="TextureButton" parent="Control/BoxContainer/CenterContainer3"]
 layout_mode = 2
+texture_normal = ExtResource("6_jrvpf")
+script = ExtResource("1_t52ko")
 
 [node name="l_block" parent="Control/BoxContainer/CenterContainer3/TextureButton" instance=ExtResource("3_jwpiy")]
 position = Vector2(32, -20)
@@ -55,6 +67,8 @@ layout_mode = 2
 
 [node name="TextureButton" type="TextureButton" parent="Control/BoxContainer/CenterContainer4"]
 layout_mode = 2
+texture_normal = ExtResource("8_v6fug")
+script = ExtResource("1_t52ko")
 
 [node name="reverse_l_block" parent="Control/BoxContainer/CenterContainer4/TextureButton" instance=ExtResource("4_iodcd")]
 position = Vector2(52, -20)
@@ -64,6 +78,8 @@ layout_mode = 2
 
 [node name="TextureButton" type="TextureButton" parent="Control/BoxContainer/CenterContainer5"]
 layout_mode = 2
+texture_normal = ExtResource("10_21jde")
+script = ExtResource("1_t52ko")
 
 [node name="zig_zag" parent="Control/BoxContainer/CenterContainer5/TextureButton" instance=ExtResource("5_trgbb")]
 position = Vector2(-16, 20)
@@ -73,6 +89,8 @@ layout_mode = 2
 
 [node name="TextureButton" type="TextureButton" parent="Control/BoxContainer/CenterContainer6"]
 layout_mode = 2
+texture_normal = ExtResource("12_dokux")
+script = ExtResource("1_t52ko")
 
 [node name="reverse_zig_zag" parent="Control/BoxContainer/CenterContainer6/TextureButton" instance=ExtResource("6_au5qp")]
 position = Vector2(4, 20)
@@ -82,6 +100,8 @@ layout_mode = 2
 
 [node name="TextureButton" type="TextureButton" parent="Control/BoxContainer/CenterContainer7"]
 layout_mode = 2
+texture_normal = ExtResource("14_kskod")
+script = ExtResource("1_t52ko")
 
 [node name="t_block" parent="Control/BoxContainer/CenterContainer7/TextureButton" instance=ExtResource("7_xps33")]
 position = Vector2(24, 20)

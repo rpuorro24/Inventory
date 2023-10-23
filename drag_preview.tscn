@@ -1,4 +1,0 @@
-[gd_scene format=3 uid="uid://8rwpy7bd15gg"]
-
-[node name="Drag Preview" type="Sprite2D"]
-self_modulate = Color(1, 1, 1, 0.721569)

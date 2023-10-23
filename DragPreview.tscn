@@ -3,5 +3,5 @@
 [ext_resource type="Script" path="res://DragPreview.gd" id="1_ywjw6"]
 
 [node name="DragPreview" type="Sprite2D"]
-self_modulate = Color(1, 1, 1, 0.721569)
+modulate = Color(1, 1, 1, 0.721569)
 script = ExtResource("1_ywjw6")

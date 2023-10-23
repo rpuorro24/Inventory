@@ -1,6 +1,6 @@
 extends TextureButton
 
-const dragPreview = preload("res://DragPreview.tscn")
+const DRAGPREVIEW = preload("res://DragPreview.tscn")
 
 
 # Called when the node enters the scene tree for the first time.
@@ -19,8 +19,10 @@ func _get_drag_data(position: Vector2):
 	var data = {}
 	data["origin_node"] = self
 	data["origin_slot"] = slot
+	data["origin_texture_normal"] = texture_normal
+	data["origin_texture_pressed"] = texture_pressed
 	
-	var dragPreview = dragPreview.instance()
+	var dragPreview = DRAGPREVIEW.instantiate()
 	dragPreview.texture = texture_normal
 	add_child(dragPreview)
 	
@@ -30,6 +32,7 @@ func _get_drag_data(position: Vector2):
 func _can_drop_data(position, data):
 	var target_slot = get_parent().get_name()
 	data["target_texture_normal"] = texture_normal
+	data["target_texture_pressed"] = texture_pressed
 	
 	return true
 
@@ -37,5 +40,7 @@ func _can_drop_data(position, data):
 func _drop_data(position, data):
 	
 	data["origin_node"].texture_normal = data["target_texture_normal"]
+	data["origin_node"].texture_pressed = data["target_texture_pressed"]
 	
 	texture_normal = data["origin_texture_normal"]
+	texture_pressed = data["origin_texture_pressed"]
