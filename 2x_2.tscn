@@ -1,14 +1,19 @@
-[gd_scene load_steps=2 format=3 uid="uid://c06ox63sdnbe4"]
+[gd_scene load_steps=3 format=3 uid="uid://c06ox63sdnbe4"]
 
+[ext_resource type="Script" path="res://dragging.gd" id="1_0hgqj"]
 [ext_resource type="Texture2D" uid="uid://cwhq332rh636a" path="res://block_textures/2x2.png" id="1_corls"]
 
-[node name="Area2D" type="Area2D"]
+[node name="2x2" type="Area2D"]
+script = ExtResource("1_0hgqj")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 z_index = 1
-position = Vector2(8, 8)
-scale = Vector2(0.193, 0.193)
+position = Vector2(91.9735, 67.9976)
+scale = Vector2(0.857774, 0.867527)
 texture = ExtResource("1_corls")
 
-[node name="2x2" type="CollisionPolygon2D" parent="."]
-polygon = PackedVector2Array(0, 0, 16, 0, 16, 16, 0, 16)
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(56, 32)
+polygon = PackedVector2Array(0, 0, 72, 0, 72, 72, 0, 72)
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
